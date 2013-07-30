@@ -14,11 +14,15 @@
 		DC2C403F17A7E0EA0082E09A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2C402717A7E0E90082E09A /* Cocoa.framework */; };
 		DC2C404217A7E0EA0082E09A /* azure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2C402417A7E0E90082E09A /* azure.framework */; };
 		DC2C404817A7E0EA0082E09A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC2C404617A7E0EA0082E09A /* InfoPlist.strings */; };
-		DC2C404B17A7E0EA0082E09A /* azureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C404A17A7E0EA0082E09A /* azureTests.m */; };
+		DC2C404B17A7E0EA0082E09A /* MSQueueServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C404A17A7E0EA0082E09A /* MSQueueServiceTests.m */; };
 		DC2C405917A7EB710082E09A /* azure.podspec in Resources */ = {isa = PBXBuildFile; fileRef = DC2C405817A7EB710082E09A /* azure.podspec */; };
 		DC2C405B17A7EE390082E09A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DC2C405A17A7EE390082E09A /* Podfile */; };
-		DC2C405D17A7F2460082E09A /* QueueService.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2C405C17A7F2460082E09A /* QueueService.h */; };
-		DC2C405F17A7F2770082E09A /* QueueService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C405E17A7F2760082E09A /* QueueService.m */; };
+		DC2C405D17A7F2460082E09A /* MSQueueService.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2C405C17A7F2460082E09A /* MSQueueService.h */; };
+		DC2C405F17A7F2770082E09A /* MSQueueService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C405E17A7F2760082E09A /* MSQueueService.m */; };
+		DC2C406617A9B0D40082E09A /* MSSharedKey.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2C406417A9B0D40082E09A /* MSSharedKey.h */; };
+		DC2C406717A9B0D40082E09A /* MSSharedKey.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C406517A9B0D40082E09A /* MSSharedKey.m */; };
+		DC2C406A17A9B1D50082E09A /* MSHmacSha256Sign.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2C406817A9B1D50082E09A /* MSHmacSha256Sign.h */; };
+		DC2C406B17A9B1D50082E09A /* MSHmacSha256Sign.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C406917A9B1D50082E09A /* MSHmacSha256Sign.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,12 +49,16 @@
 		DC2C403D17A7E0EA0082E09A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DC2C404517A7E0EA0082E09A /* azureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "azureTests-Info.plist"; sourceTree = "<group>"; };
 		DC2C404717A7E0EA0082E09A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DC2C404917A7E0EA0082E09A /* azureTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = azureTests.h; sourceTree = "<group>"; };
-		DC2C404A17A7E0EA0082E09A /* azureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = azureTests.m; sourceTree = "<group>"; };
+		DC2C404917A7E0EA0082E09A /* MSQueueServiceTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSQueueServiceTests.h; sourceTree = "<group>"; };
+		DC2C404A17A7E0EA0082E09A /* MSQueueServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSQueueServiceTests.m; sourceTree = "<group>"; };
 		DC2C405817A7EB710082E09A /* azure.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = azure.podspec; sourceTree = "<group>"; };
 		DC2C405A17A7EE390082E09A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		DC2C405C17A7F2460082E09A /* QueueService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueService.h; sourceTree = "<group>"; };
-		DC2C405E17A7F2760082E09A /* QueueService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueService.m; sourceTree = "<group>"; };
+		DC2C405C17A7F2460082E09A /* MSQueueService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSQueueService.h; sourceTree = "<group>"; };
+		DC2C405E17A7F2760082E09A /* MSQueueService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSQueueService.m; sourceTree = "<group>"; };
+		DC2C406417A9B0D40082E09A /* MSSharedKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSharedKey.h; sourceTree = "<group>"; };
+		DC2C406517A9B0D40082E09A /* MSSharedKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSharedKey.m; sourceTree = "<group>"; };
+		DC2C406817A9B1D50082E09A /* MSHmacSha256Sign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHmacSha256Sign.h; sourceTree = "<group>"; };
+		DC2C406917A9B1D50082E09A /* MSHmacSha256Sign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHmacSha256Sign.m; sourceTree = "<group>"; };
 		E874D70D2D73438D847330E2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,8 +131,13 @@
 		DC2C402D17A7E0E90082E09A /* azure */ = {
 			isa = PBXGroup;
 			children = (
-				DC2C406017A7F3A30082E09A /* Services */,
+				DC2C405E17A7F2760082E09A /* MSQueueService.m */,
+				DC2C405C17A7F2460082E09A /* MSQueueService.h */,
 				DC2C402E17A7E0E90082E09A /* Supporting Files */,
+				DC2C406417A9B0D40082E09A /* MSSharedKey.h */,
+				DC2C406517A9B0D40082E09A /* MSSharedKey.m */,
+				DC2C406817A9B1D50082E09A /* MSHmacSha256Sign.h */,
+				DC2C406917A9B1D50082E09A /* MSHmacSha256Sign.m */,
 			);
 			path = azure;
 			sourceTree = "<group>";
@@ -142,8 +155,8 @@
 		DC2C404317A7E0EA0082E09A /* azureTests */ = {
 			isa = PBXGroup;
 			children = (
-				DC2C404917A7E0EA0082E09A /* azureTests.h */,
-				DC2C404A17A7E0EA0082E09A /* azureTests.m */,
+				DC2C404917A7E0EA0082E09A /* MSQueueServiceTests.h */,
+				DC2C404A17A7E0EA0082E09A /* MSQueueServiceTests.m */,
 				DC2C404417A7E0EA0082E09A /* Supporting Files */,
 			);
 			path = azureTests;
@@ -158,23 +171,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DC2C406017A7F3A30082E09A /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				DC2C406117A7F3AA0082E09A /* Queue */,
-			);
-			name = Services;
-			sourceTree = "<group>";
-		};
-		DC2C406117A7F3AA0082E09A /* Queue */ = {
-			isa = PBXGroup;
-			children = (
-				DC2C405E17A7F2760082E09A /* QueueService.m */,
-				DC2C405C17A7F2460082E09A /* QueueService.h */,
-			);
-			name = Queue;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -182,7 +178,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC2C405D17A7F2460082E09A /* QueueService.h in Headers */,
+				DC2C405D17A7F2460082E09A /* MSQueueService.h in Headers */,
+				DC2C406617A9B0D40082E09A /* MSSharedKey.h in Headers */,
+				DC2C406A17A9B1D50082E09A /* MSHmacSha256Sign.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +325,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC2C405F17A7F2770082E09A /* QueueService.m in Sources */,
+				DC2C405F17A7F2770082E09A /* MSQueueService.m in Sources */,
+				DC2C406717A9B0D40082E09A /* MSSharedKey.m in Sources */,
+				DC2C406B17A9B1D50082E09A /* MSHmacSha256Sign.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC2C404B17A7E0EA0082E09A /* azureTests.m in Sources */,
+				DC2C404B17A7E0EA0082E09A /* MSQueueServiceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
-platform :ios, '5.1'
+platform :osx, '10.7'
  
 xcodeproj 'azure.xcodeproj'
  
 pod 'AFNetworking'
-pod 'AFNetworking'
+pod 'JSONKit'

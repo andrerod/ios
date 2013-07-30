@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'Apache 2.0', :file => 'http://www.apache.org/licenses/LICENSE-2.0' }
   s.author       = { "Andre Rodrigues" => "andrerod@microsoft.com" }
 
-  s.platform     = :ios, '5.0'
+  s.platform     = :osx, '5.0'
 
   s.dependency 'AFNetworking', '~> 1.0'
 end

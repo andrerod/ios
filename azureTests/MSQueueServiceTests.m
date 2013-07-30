@@ -13,17 +13,28 @@
  * limitations under the License.
  */
 
+#import "MSQueueServiceTests.h"
 
+#import "MSQueueService.h"
 
-/*
-//Creating NSURL from the String for AFNetworking.
-NSURL *url = [NSURL URLWithString:@"https://alpha-api.app.net/stream/0/posts/stream/global"];
-//Creating NSURLRequest for AFNetworking
-NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//Creating AFNetworking operation.
-AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-    NSLog(@"App.net Global Stream: %@", JSON);
-} failure:nil];
-//starting the server call.
-[operation start];
-*/
+@implementation QueueServiceTests
+
+- (void)setUp
+{
+    [super setUp];
+    
+    _queueService = [[MSQueueService alloc] init];
+    STAssertNotNil(_queueService, @"Could not create queryService.");
+}
+
+- (void)tearDown
+{
+    [super tearDown];
+}
+
+- (void)testListQueues
+{
+    [_queueService listQueues];
+}
+
+@end

@@ -13,12 +13,12 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import <SenTestingKit/SenTestingKit.h>
 
-@interface QueueService : NSObject
+#import "MSQueueService.h"
 
-@property NSString *baseUri;
-
-- (void)listQueues;
+@interface QueueServiceTests : SenTestCase {
+    MSQueueService * _queueService;
+}
 
 @end
