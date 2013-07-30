@@ -1,0 +1,12 @@
+# Pods #
+Pods
+
+# Mac OS #
+.DS_Store
+.DS_Store?
+
+# Windows #
+Thumbs.db
+
+# WebStorm #
+.idea/
