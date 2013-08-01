@@ -13,17 +13,29 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import "MSHmacSha256SignTests.h"
+#import "MSHmacSha256Sign.h"
 
-@interface MSHmacSha256Sign : NSObject {
-    NSString * _accessKey;
-    NSString * _decodedAccessKey;
+@implementation MSHmacSha256SignTests
+
+- (void)setUp
+{
+    [super setUp];
+    
+    _subject = [[MSHmacSha256Sign alloc] initWithAccessKey: @"Buggy"];
+    STAssertNotNil(_subject, @"Could not create MSHmacSha256Sign.");
 }
 
-- (id)initWithAccessKey:(NSString *)accessKey;
-- (NSString *)sign:(NSString *)stringToSign;
+- (void)tearDown
+{
+    [super tearDown];
+}
 
-+ (NSString *) base64EncodeString: (NSString *) strData;
-+ (NSString *) base64EncodeData: (NSData *) objData;
-+ (NSString*) base64forData:(NSData*)theData;
+- (void)testSign
+{
+    NSString *result = [_subject sign :@"DELETE\n\n0\n\n\n\n\n\n\n\n\nx-ms-date:Thu, 01 Aug 2013 13:49:05 GMTx-ms-version:2012-02-12\n/ciserversdk/cont1\nrestype:container"];
+    
+    STAssertEquals(result, @"buggy2", @"Key should be valid");
+}
+
 @end

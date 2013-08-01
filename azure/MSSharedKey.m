@@ -24,6 +24,5 @@ function SharedKey(storageAccount, storageAccessKey, usePathStyleUri) {
     this.usePathStyleUri = usePathStyleUri;
     this.signer = new HmacSha256Sign(storageAccessKey);
 */
-}
 
 @end

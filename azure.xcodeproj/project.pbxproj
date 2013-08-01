@@ -23,6 +23,7 @@
 		DC2C406717A9B0D40082E09A /* MSSharedKey.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C406517A9B0D40082E09A /* MSSharedKey.m */; };
 		DC2C406A17A9B1D50082E09A /* MSHmacSha256Sign.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2C406817A9B1D50082E09A /* MSHmacSha256Sign.h */; };
 		DC2C406B17A9B1D50082E09A /* MSHmacSha256Sign.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C406917A9B1D50082E09A /* MSHmacSha256Sign.m */; };
+		DC79BA3217AA9DD70058AEC1 /* MSHmacSha256SignTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC79BA3117AA9DD70058AEC1 /* MSHmacSha256SignTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		DC2C406517A9B0D40082E09A /* MSSharedKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSharedKey.m; sourceTree = "<group>"; };
 		DC2C406817A9B1D50082E09A /* MSHmacSha256Sign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHmacSha256Sign.h; sourceTree = "<group>"; };
 		DC2C406917A9B1D50082E09A /* MSHmacSha256Sign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHmacSha256Sign.m; sourceTree = "<group>"; };
+		DC79BA3017AA9DD70058AEC1 /* MSHmacSha256SignTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHmacSha256SignTests.h; sourceTree = "<group>"; };
+		DC79BA3117AA9DD70058AEC1 /* MSHmacSha256SignTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHmacSha256SignTests.m; sourceTree = "<group>"; };
 		E874D70D2D73438D847330E2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -158,6 +161,8 @@
 				DC2C404917A7E0EA0082E09A /* MSQueueServiceTests.h */,
 				DC2C404A17A7E0EA0082E09A /* MSQueueServiceTests.m */,
 				DC2C404417A7E0EA0082E09A /* Supporting Files */,
+				DC79BA3017AA9DD70058AEC1 /* MSHmacSha256SignTests.h */,
+				DC79BA3117AA9DD70058AEC1 /* MSHmacSha256SignTests.m */,
 			);
 			path = azureTests;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC2C404B17A7E0EA0082E09A /* MSQueueServiceTests.m in Sources */,
+				DC79BA3217AA9DD70058AEC1 /* MSHmacSha256SignTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

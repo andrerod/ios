@@ -13,17 +13,11 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import <SenTestingKit/SenTestingKit.h>
+#import "MSHmacSha256Sign.h"
 
-@interface MSHmacSha256Sign : NSObject {
-    NSString * _accessKey;
-    NSString * _decodedAccessKey;
+@interface MSHmacSha256SignTests : SenTestCase {
+    MSHmacSha256Sign * _subject;
 }
 
-- (id)initWithAccessKey:(NSString *)accessKey;
-- (NSString *)sign:(NSString *)stringToSign;
-
-+ (NSString *) base64EncodeString: (NSString *) strData;
-+ (NSString *) base64EncodeData: (NSData *) objData;
-+ (NSString*) base64forData:(NSData*)theData;
 @end
