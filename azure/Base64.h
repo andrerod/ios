@@ -13,17 +13,17 @@
  * limitations under the License.
  */
 
-#import "MSSharedKey.h"
+#import <Foundation/Foundation.h>
 
-@implementation MSSharedKey
+// See more at: http://www.ecanarys.com/blog-entry/base64-encoding-objective-c#sthash.ynylUh6r.dpuf
 
-/*
-function SharedKey(storageAccount, storageAccessKey, usePathStyleUri) {
-    this.storageAccount = storageAccount;
-    this.storageAccessKey = storageAccessKey;
-    this.usePathStyleUri = usePathStyleUri;
-    this.signer = new HmacSha256Sign(storageAccessKey);
+@interface Base64 : NSObject {
+    
 }
-*/
 
++ (void) initialize;
++ (NSString*) encode:(const uint8_t*) input length:(NSInteger) length;
++ (NSString*) encode:(NSData*) rawBytes;
++ (NSData*) decode:(const char*) string length:(NSInteger) inputLength;
++ (NSData*) decode:(NSString*) string;
 @end

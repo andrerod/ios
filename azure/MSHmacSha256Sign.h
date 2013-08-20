@@ -14,6 +14,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "Base64.h"
 
 @interface MSHmacSha256Sign : NSObject {
     NSString * _accessKey;
@@ -22,8 +23,4 @@
 
 - (id)initWithAccessKey:(NSString *)accessKey;
 - (NSString *)sign:(NSString *)stringToSign;
-
-+ (NSString *) base64EncodeString: (NSString *) strData;
-+ (NSString *) base64EncodeData: (NSData *) objData;
-+ (NSString*) base64forData:(NSData*)theData;
 @end
