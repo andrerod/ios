@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface MSWebResource : NSObject {
+
+@public
     NSDictionary * headers;
 }
 

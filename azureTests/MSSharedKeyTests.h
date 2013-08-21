@@ -7,7 +7,8 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "MSSharedKey.h"
 
 @interface MSSharedKeyTests : SenTestCase
-
+    MSSharedKey* _subject;
 @end

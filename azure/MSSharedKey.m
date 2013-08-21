@@ -41,6 +41,24 @@
 
 -(NSString *)getCanonicalizedHeaders: (MSWebResource *)webResource
 {
+    NSMutableArray *canonicalizedHeadersArray = [NSMutableArray array];
+    
+    for(NSString * header in webResource->headers)
+    {
+        if([header hasPrefix:@"x-ms-"]) {
+            [canonicalizedHeadersArray addObject:header];
+        }
+    }
+    
+    [canonicalizedHeadersArray sortUsingSelector:@selector(compare:)];
+    
+    NSString *canonicalizedHeaders = @"";
+    for (NSString * header in canonicalizedHeadersArray)
+    {
+        [canonicalizedHeaders stringByAppendingString: [NSString stringWithFormat:@"%@:%@\n", [header lowercaseString], [webResource->headers objectForKey:header]]];
+    }
+    
+    return canonicalizedHeaders;
 }
 
 /*
