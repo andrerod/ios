@@ -34,6 +34,15 @@
     
 }
 
+-(NSString *)getCanonicalizedResource: (MSWebResource *)webResource
+{
+
+}
+
+-(NSString *)getCanonicalizedHeaders: (MSWebResource *)webResource
+{
+}
+
 /*
 SharedKey.prototype.signRequest = function (webResource, callback) {
     var getvalueToAppend = function (value) {
