@@ -15,6 +15,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MSHmacSha256Sign.h"
+#import "MSWebResource.h"
 
 @interface MSSharedKey : NSObject
 {
@@ -25,5 +26,8 @@
 }
 
 -(id)initWithAccount: (NSString *)account AndAccessKey: accessKey;
-
+-(void)signRequest: (MSWebResource *)webResource;
+-(NSString *)getCanonicalizedResource: (MSWebResource *)webResource;
+-(NSString *)getCanonicalizedHeaders: (MSWebResource *)webResource;
+    
 @end
