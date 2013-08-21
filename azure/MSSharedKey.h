@@ -14,11 +14,16 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "MSHmacSha256Sign.h"
 
 @interface MSSharedKey : NSObject
 {
-    NSString * storageAccount;
-    NSString * storageAccessKey;
+    NSString * _account;
+    NSString * _accessKey;
+    
+    MSHmacSha256Sign * _signer;
 }
+
+-(id)initWithAccount: (NSString *)account AndAccessKey: accessKey;
 
 @end

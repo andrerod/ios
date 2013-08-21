@@ -16,14 +16,17 @@
 #import "MSSharedKey.h"
 
 @implementation MSSharedKey
-
-/*
-function SharedKey(storageAccount, storageAccessKey, usePathStyleUri) {
-    this.storageAccount = storageAccount;
-    this.storageAccessKey = storageAccessKey;
-    this.usePathStyleUri = usePathStyleUri;
-    this.signer = new HmacSha256Sign(storageAccessKey);
+-(id)initWithAccount: (NSString *)account AndAccessKey: accessKey
+{
+    self = [super init];
+    if (self) {
+        self->_account = account;
+        self->_accessKey = accessKey;
+        
+        self->_signer = [[MSHmacSha256Sign alloc] initWithAccessKey: accessKey];
+    }
+    
+    return self;
 }
-*/
 
 @end
