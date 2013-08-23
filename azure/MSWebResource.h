@@ -11,7 +11,7 @@
 @interface MSWebResource : NSObject {
 
 @public
-    NSDictionary * headers;
+    NSMutableDictionary * headers;
 }
 
 @end

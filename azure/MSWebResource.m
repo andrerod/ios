@@ -9,5 +9,13 @@
 #import "MSWebResource.h"
 
 @implementation MSWebResource
-
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        self->headers = [NSMutableDictionary alloc];
+    }
+    return self;
+}
 @end
