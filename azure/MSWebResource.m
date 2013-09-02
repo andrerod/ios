@@ -15,6 +15,7 @@
     if (self)
     {
         self->headers = [[NSMutableDictionary alloc] init];
+        self->queryString = [[NSMutableDictionary alloc] init];
     }
     return self;
 }

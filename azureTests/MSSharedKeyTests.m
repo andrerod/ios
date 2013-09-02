@@ -34,4 +34,9 @@
     STAssertEqualObjects(@"x-ms-header:value1\n", canonicalizedResources, @"the canonicalized headers did not match");
 }
 
+- (void)testGetCanonicalizedResource
+{
+    
+}
+
 @end

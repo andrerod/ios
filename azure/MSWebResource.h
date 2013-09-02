@@ -11,7 +11,10 @@
 @interface MSWebResource : NSObject {
 
 @public
+    NSString * httpVerb;
+    NSString * path;
     NSMutableDictionary * headers;
+    NSMutableDictionary * queryString;
 }
 
 @end

@@ -29,15 +29,67 @@
     return self;
 }
 
+-(NSString *)getValueToAppend: (NSString *)header
+{
+    if (header != nil) {
+        return [NSString stringWithFormat:@"%@\n", header];
+    }
+
+    return @"\n";
+}
+
 -(void)signRequest: (MSWebResource *)webResource
 {
+    // TODO: fix issue with casing for header names
+    NSString * stringToSign = [NSString stringWithFormat:@"%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@%@",
+                               webResource->httpVerb,
+                               [self getValueToAppend:[webResource->headers objectForKey:@"content-encoding"]],
+                               [self getValueToAppend:[webResource->headers objectForKey:@"content-language"]],
+                               [self getValueToAppend:[webResource->headers objectForKey:@"content-length"]],
+                               [self getValueToAppend:[webResource->headers objectForKey:@"content-md5"]],
+                               [self getValueToAppend:[webResource->headers objectForKey:@"content-type"]],
+                               [self getValueToAppend:[webResource->headers objectForKey:@"if-modified-since"]],
+                               [self getValueToAppend:[webResource->headers objectForKey:@"if-match"]],
+                               [self getValueToAppend:[webResource->headers objectForKey:@"if-none-match"]],
+                               [self getValueToAppend:[webResource->headers objectForKey:@"if-unmodified-since"]],
+                               [self getValueToAppend:[webResource->headers objectForKey:@"range"]],
+                               [self getCanonicalizedHeaders:webResource],
+                               [self getCanonicalizedResource:webResource]];
     
+    NSString * signature = [self->_signer sign:stringToSign];
+    
+    [webResource->headers setObject:@"authorization" forKey:[NSString stringWithFormat:@"SharedKey %@:%@",
+                                                             self->_account, signature]];
 }
 
 -(NSString *)getCanonicalizedResource: (MSWebResource *)webResource
 {
-    [NSException raise:@"Not implemented"format:@"Not implemented"];
-    return nil;
+    NSString * path = @"/";
+    if (webResource->path != nil && webResource->path.length > 0) {
+        path = webResource->path;
+    }
+    
+    NSString * canonicalizedResource = [NSString stringWithFormat:@"/%@%@", self->_account, path];
+    
+    // Get the raw query string values for signing
+    if (webResource->queryString != nil) {
+        NSMutableArray *queryStringValues = [NSMutableArray array];
+        
+        // Build the canonicalized resource by sorting the values by name.
+        for(NSString * queryOption in webResource->queryString)
+        {
+            [queryStringValues addObject:queryOption];
+        }
+        
+        [queryStringValues sortUsingSelector:@selector(compare:)];
+        
+        for (NSString * queryOption in queryStringValues)
+        {
+            canonicalizedResource = [canonicalizedResource stringByAppendingString: [NSString stringWithFormat:@"\n%@:%@", [queryOption lowercaseString], [webResource->queryString objectForKey:queryOption]]];
+        }
+    }
+    
+    return canonicalizedResource;
 }
 
 -(NSString *)getCanonicalizedHeaders: (MSWebResource *)webResource
@@ -56,92 +108,9 @@
     NSString *canonicalizedHeaders = @"";
     for (NSString * header in canonicalizedHeadersArray)
     {
-        canonicalizedHeaders = [canonicalizedHeaders stringByAppendingString: [NSString stringWithFormat:@"%@:%@\n", [header lowercaseString], [webResource->headers objectForKey:header]]];
+        canonicalizedHeaders = [canonicalizedHeaders stringByAppendingString: [NSString stringWithFormat:@"%@:%@\n", [header lowercaseString], [[webResource->headers objectForKey:header] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]]];
     }
     
     return canonicalizedHeaders;
 }
-
-/*
-SharedKey.prototype.signRequest = function (webResource, callback) {
-    var getvalueToAppend = function (value) {
-        if (azureutil.objectIsNull(value)) {
-            return '\n';
-        } else {
-            return value + '\n';
-        }
-    };
-    
-    var stringToSign =
-    webResource.httpVerb + '\n' +
-    getvalueToAppend(webResource.headers[HeaderConstants.CONTENT_ENCODING]) +
-    getvalueToAppend(webResource.headers[HeaderConstants.CONTENT_LANGUAGE]) +
-    getvalueToAppend(webResource.headers[HeaderConstants.CONTENT_LENGTH]) +
-    getvalueToAppend(webResource.headers[HeaderConstants.CONTENT_MD5]) +
-    getvalueToAppend(webResource.headers[HeaderConstants.CONTENT_TYPE]) +
-    getvalueToAppend(webResource.headers[HeaderConstants.DATE]) +
-    getvalueToAppend(webResource.headers[HeaderConstants.IF_MODIFIED_SINCE]) +
-    getvalueToAppend(webResource.headers[HeaderConstants.IF_MATCH]) +
-    getvalueToAppend(webResource.headers[HeaderConstants.IF_NONE_MATCH]) +
-    getvalueToAppend(webResource.headers[HeaderConstants.IF_UNMODIFIED_SINCE]) +
-    getvalueToAppend(webResource.headers[HeaderConstants.RANGE]) +
-    this._getCanonicalizedHeaders(webResource) +
-    this._getCanonicalizedResource(webResource);
-    
-    var signature = this.signer.sign(stringToSign);
-    
-    webResource.withHeader(HeaderConstants.AUTHORIZATION, 'SharedKey ' + this.storageAccount + ':' + signature);
-    callback(null);
-};
-
-SharedKey.prototype._getCanonicalizedResource = function (webResource) {
-    var path = '/';
-    if (webResource.path) {
-        path = webResource.path;
-    }
-    
-    var canonicalizedResource = '/' + this.storageAccount + path;
-    
-    // Get the raw query string values for signing
-    var queryStringValues = webResource.queryString;
-    
-    // Build the canonicalized resource by sorting the values by name.
-    if (queryStringValues) {
-        var paramNames = [];
-        Object.keys(queryStringValues).forEach(function (n) {
-            paramNames.push(n);
-        });
-        
-        paramNames = paramNames.sort();
-        Object.keys(paramNames).forEach(function (name) {
-            canonicalizedResource += '\n' + paramNames[name] + ':' + queryStringValues[paramNames[name]];
-        });
-    }
-    
-    return canonicalizedResource;
-};
-
-SharedKey.prototype._getCanonicalizedHeaders = function (webResource) {
-    // Build canonicalized headers
-    var canonicalizedHeaders = '';
-    if (webResource.headers) {
-        var canonicalizedHeadersArray = [];
-        for (var header in webResource.headers) {
-            if (header.indexOf(HeaderConstants.PREFIX_FOR_STORAGE_HEADER) === 0) {
-                canonicalizedHeadersArray.push(header);
-            }
-        }
-        
-        canonicalizedHeadersArray.sort();
-        
-        _.each(canonicalizedHeadersArray, function (currentHeader) {
-            canonicalizedHeaders += currentHeader.toLowerCase() + ':' + webResource.headers[currentHeader] + '\n';
-        });
-    }
-    
-    return canonicalizedHeaders;
-};
- 
- */
-
 @end
