@@ -1,10 +1,17 @@
-//
-//  MSSharedKeyTests.m
-//  azure
-//
-//  Created by André Rodrigues on 8/21/13.
-//  Copyright (c) 2013 Microsoft. All rights reserved.
-//
+/**
+ * Copyright (c) Microsoft.  All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 #import "MSSharedKeyTests.h"
 
@@ -41,17 +48,17 @@
 
 - (void)testSignRequest
 {
-    /*
-    var webResource = WebResource.get('container');
-    webResource.withQueryOption(QueryStringConstants.RESTYPE, 'container');
-    webResource.withHeader(HeaderConstants.CONTENT_TYPE, '');
-    webResource.withHeader(HeaderConstants.STORAGE_VERSION_HEADER, HeaderConstants.TARGET_STORAGE_VERSION);
-    webResource.withHeader(HeaderConstants.DATE_HEADER, 'Fri, 23 Sep 2011 01:37:34 GMT');
-    
-    sharedkey.signRequest(webResource, function () {
-        assert.equal(webResource.headers[HeaderConstants.AUTHORIZATION], 'SharedKey devstoreaccount1:Y5R86+6XE5MH602SIyjeTwlJuQjbawv20PT4kb/F/04=');
+    MSWebResource* webResource = [[MSWebResource alloc] init];
+    webResource->httpVerb = @"get";
+    webResource->httpVerb = @"container";
+    [webResource->queryString setObject:@"restype" forKey:@"container"];
+    [webResource->headers setObject:@"content-type" forKey:@""];
+    [webResource->headers setObject:@"x-ms-version" forKey:@"2011-08-18"];
+    [webResource->headers setObject:@"date" forKey:@"Fri, 23 Sep 2011 01:37:34 GMT"];
 
-        */
+    [_subject signRequest:webResource];
+    
+    STAssertEqualObjects(@"SharedKey devstoreaccount1:Y5R86+6XE5MH602SIyjeTwlJuQjbawv20PT4kb/F/04=", [webResource->headers objectForKey:@"authorization"], @"the authorization header is not valid");
 }
 
 @end
