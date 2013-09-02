@@ -23,9 +23,9 @@
     [super tearDown];
 }
 
-- (void)testSign
+- (void)testGetCanonicalizedHeaders
 {
-    MSWebResource* webResource = [MSWebResource alloc];
+    MSWebResource* webResource = [[MSWebResource alloc] init];
     [webResource->headers setObject:@"value" forKey:@"x-ms-header"];
     [webResource->headers setObject:@"value" forKey:@"Content-Type"];
 

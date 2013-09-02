@@ -14,7 +14,7 @@
     self = [super init];
     if (self)
     {
-        self->headers = [NSMutableDictionary alloc];
+        self->headers = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
