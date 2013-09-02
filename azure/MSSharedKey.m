@@ -36,7 +36,8 @@
 
 -(NSString *)getCanonicalizedResource: (MSWebResource *)webResource
 {
-
+    [NSException raise:@"Not implemented"format:@"Not implemented"];
+    return nil;
 }
 
 -(NSString *)getCanonicalizedHeaders: (MSWebResource *)webResource
