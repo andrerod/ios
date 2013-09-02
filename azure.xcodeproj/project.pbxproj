@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F848416315A4FE2B5BB7315 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E874D70D2D73438D847330E2 /* libPods.a */; };
+		DC2C402817A7E0E90082E09A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2C402717A7E0E90082E09A /* Cocoa.framework */; };
+		DC2C403217A7E0E90082E09A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC2C403017A7E0E90082E09A /* InfoPlist.strings */; };
+		DC2C403E17A7E0EA0082E09A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2C403D17A7E0EA0082E09A /* SenTestingKit.framework */; };
+		DC2C403F17A7E0EA0082E09A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2C402717A7E0E90082E09A /* Cocoa.framework */; };
+		DC2C404217A7E0EA0082E09A /* azure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2C402417A7E0E90082E09A /* azure.framework */; };
+		DC2C404817A7E0EA0082E09A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC2C404617A7E0EA0082E09A /* InfoPlist.strings */; };
+		DC2C404B17A7E0EA0082E09A /* MSQueueServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C404A17A7E0EA0082E09A /* MSQueueServiceTests.m */; };
+		DC2C405917A7EB710082E09A /* azure.podspec in Resources */ = {isa = PBXBuildFile; fileRef = DC2C405817A7EB710082E09A /* azure.podspec */; };
+		DC2C405B17A7EE390082E09A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DC2C405A17A7EE390082E09A /* Podfile */; };
+		DC2C405D17A7F2460082E09A /* MSQueueService.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2C405C17A7F2460082E09A /* MSQueueService.h */; };
+		DC2C405F17A7F2770082E09A /* MSQueueService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C405E17A7F2760082E09A /* MSQueueService.m */; };
+		DC2C406617A9B0D40082E09A /* MSSharedKey.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2C406417A9B0D40082E09A /* MSSharedKey.h */; };
+		DC2C406717A9B0D40082E09A /* MSSharedKey.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C406517A9B0D40082E09A /* MSSharedKey.m */; };
+		DC2C406A17A9B1D50082E09A /* MSHmacSha256Sign.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2C406817A9B1D50082E09A /* MSHmacSha256Sign.h */; };
+		DC2C406B17A9B1D50082E09A /* MSHmacSha256Sign.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C406917A9B1D50082E09A /* MSHmacSha256Sign.m */; };
+		DC6124C117C41C9100C3ACD4 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = DC6124BF17C41C9100C3ACD4 /* Base64.h */; };
+		DC6124C217C41C9100C3ACD4 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6124C017C41C9100C3ACD4 /* Base64.m */; };
+		DC79BA3217AA9DD70058AEC1 /* MSHmacSha256SignTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC79BA3117AA9DD70058AEC1 /* MSHmacSha256SignTests.m */; };
+		DCBD794517C569B200871FAC /* MSWebResource.h in Headers */ = {isa = PBXBuildFile; fileRef = DCBD794317C569B200871FAC /* MSWebResource.h */; };
+		DCBD794617C569B200871FAC /* MSWebResource.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBD794417C569B200871FAC /* MSWebResource.m */; };
+		DCBD794917C56BE600871FAC /* MSSharedKeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBD794817C56BE600871FAC /* MSSharedKeyTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC2C404017A7E0EA0082E09A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC2C401B17A7E0E80082E09A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC2C402317A7E0E80082E09A;
+			remoteInfo = azure;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		593C4A35C7EF45EDB5B6803D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		DC2C402417A7E0E90082E09A /* azure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = azure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC2C402717A7E0E90082E09A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DC2C402A17A7E0E90082E09A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DC2C402B17A7E0E90082E09A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DC2C402C17A7E0E90082E09A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DC2C402F17A7E0E90082E09A /* azure-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "azure-Info.plist"; sourceTree = "<group>"; };
+		DC2C403117A7E0E90082E09A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC2C403317A7E0E90082E09A /* azure-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "azure-Prefix.pch"; sourceTree = "<group>"; };
+		DC2C403C17A7E0EA0082E09A /* azureTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = azureTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC2C403D17A7E0EA0082E09A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DC2C404517A7E0EA0082E09A /* azureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "azureTests-Info.plist"; sourceTree = "<group>"; };
+		DC2C404717A7E0EA0082E09A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC2C404917A7E0EA0082E09A /* MSQueueServiceTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSQueueServiceTests.h; sourceTree = "<group>"; };
+		DC2C404A17A7E0EA0082E09A /* MSQueueServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSQueueServiceTests.m; sourceTree = "<group>"; };
+		DC2C405817A7EB710082E09A /* azure.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = azure.podspec; sourceTree = "<group>"; };
+		DC2C405A17A7EE390082E09A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		DC2C405C17A7F2460082E09A /* MSQueueService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSQueueService.h; sourceTree = "<group>"; };
+		DC2C405E17A7F2760082E09A /* MSQueueService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSQueueService.m; sourceTree = "<group>"; };
+		DC2C406417A9B0D40082E09A /* MSSharedKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSharedKey.h; sourceTree = "<group>"; };
+		DC2C406517A9B0D40082E09A /* MSSharedKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSharedKey.m; sourceTree = "<group>"; };
+		DC2C406817A9B1D50082E09A /* MSHmacSha256Sign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHmacSha256Sign.h; sourceTree = "<group>"; };
+		DC2C406917A9B1D50082E09A /* MSHmacSha256Sign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHmacSha256Sign.m; sourceTree = "<group>"; };
+		DC6124BF17C41C9100C3ACD4 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		DC6124C017C41C9100C3ACD4 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		DC79BA3017AA9DD70058AEC1 /* MSHmacSha256SignTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHmacSha256SignTests.h; sourceTree = "<group>"; };
+		DC79BA3117AA9DD70058AEC1 /* MSHmacSha256SignTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHmacSha256SignTests.m; sourceTree = "<group>"; };
+		DCBD794317C569B200871FAC /* MSWebResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSWebResource.h; sourceTree = "<group>"; };
+		DCBD794417C569B200871FAC /* MSWebResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSWebResource.m; sourceTree = "<group>"; };
+		DCBD794717C56BE600871FAC /* MSSharedKeyTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSharedKeyTests.h; sourceTree = "<group>"; };
+		DCBD794817C56BE600871FAC /* MSSharedKeyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSharedKeyTests.m; sourceTree = "<group>"; };
+		E874D70D2D73438D847330E2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC2C402017A7E0E80082E09A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC2C402817A7E0E90082E09A /* Cocoa.framework in Frameworks */,
+				4F848416315A4FE2B5BB7315 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC2C403817A7E0EA0082E09A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC2C403E17A7E0EA0082E09A /* SenTestingKit.framework in Frameworks */,
+				DC2C403F17A7E0EA0082E09A /* Cocoa.framework in Frameworks */,
+				DC2C404217A7E0EA0082E09A /* azure.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC2C401A17A7E0E80082E09A = {
+			isa = PBXGroup;
+			children = (
+				DC2C405A17A7EE390082E09A /* Podfile */,
+				DC2C405817A7EB710082E09A /* azure.podspec */,
+				DC2C402D17A7E0E90082E09A /* azure */,
+				DC2C404317A7E0EA0082E09A /* azureTests */,
+				DC2C402617A7E0E90082E09A /* Frameworks */,
+				DC2C402517A7E0E90082E09A /* Products */,
+				593C4A35C7EF45EDB5B6803D /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		DC2C402517A7E0E90082E09A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC2C402417A7E0E90082E09A /* azure.framework */,
+				DC2C403C17A7E0EA0082E09A /* azureTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC2C402617A7E0E90082E09A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC2C402717A7E0E90082E09A /* Cocoa.framework */,
+				DC2C403D17A7E0EA0082E09A /* SenTestingKit.framework */,
+				DC2C402917A7E0E90082E09A /* Other Frameworks */,
+				E874D70D2D73438D847330E2 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC2C402917A7E0E90082E09A /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC2C402A17A7E0E90082E09A /* AppKit.framework */,
+				DC2C402B17A7E0E90082E09A /* CoreData.framework */,
+				DC2C402C17A7E0E90082E09A /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DC2C402D17A7E0E90082E09A /* azure */ = {
+			isa = PBXGroup;
+			children = (
+				DC2C405E17A7F2760082E09A /* MSQueueService.m */,
+				DC2C405C17A7F2460082E09A /* MSQueueService.h */,
+				DC2C406417A9B0D40082E09A /* MSSharedKey.h */,
+				DC2C406517A9B0D40082E09A /* MSSharedKey.m */,
+				DC2C406817A9B1D50082E09A /* MSHmacSha256Sign.h */,
+				DC2C406917A9B1D50082E09A /* MSHmacSha256Sign.m */,
+				DC2C402E17A7E0E90082E09A /* Supporting Files */,
+				DC6124BF17C41C9100C3ACD4 /* Base64.h */,
+				DC6124C017C41C9100C3ACD4 /* Base64.m */,
+				DCBD794317C569B200871FAC /* MSWebResource.h */,
+				DCBD794417C569B200871FAC /* MSWebResource.m */,
+			);
+			path = azure;
+			sourceTree = "<group>";
+		};
+		DC2C402E17A7E0E90082E09A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC2C402F17A7E0E90082E09A /* azure-Info.plist */,
+				DC2C403017A7E0E90082E09A /* InfoPlist.strings */,
+				DC2C403317A7E0E90082E09A /* azure-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC2C404317A7E0EA0082E09A /* azureTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC2C404917A7E0EA0082E09A /* MSQueueServiceTests.h */,
+				DC2C404A17A7E0EA0082E09A /* MSQueueServiceTests.m */,
+				DC79BA3017AA9DD70058AEC1 /* MSHmacSha256SignTests.h */,
+				DC79BA3117AA9DD70058AEC1 /* MSHmacSha256SignTests.m */,
+				DC2C404417A7E0EA0082E09A /* Supporting Files */,
+				DCBD794717C56BE600871FAC /* MSSharedKeyTests.h */,
+				DCBD794817C56BE600871FAC /* MSSharedKeyTests.m */,
+			);
+			path = azureTests;
+			sourceTree = "<group>";
+		};
+		DC2C404417A7E0EA0082E09A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC2C404517A7E0EA0082E09A /* azureTests-Info.plist */,
+				DC2C404617A7E0EA0082E09A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DC2C402117A7E0E80082E09A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC2C405D17A7F2460082E09A /* MSQueueService.h in Headers */,
+				DC2C406617A9B0D40082E09A /* MSSharedKey.h in Headers */,
+				DC2C406A17A9B1D50082E09A /* MSHmacSha256Sign.h in Headers */,
+				DC6124C117C41C9100C3ACD4 /* Base64.h in Headers */,
+				DCBD794517C569B200871FAC /* MSWebResource.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DC2C402317A7E0E80082E09A /* azure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC2C404E17A7E0EA0082E09A /* Build configuration list for PBXNativeTarget "azure" */;
+			buildPhases = (
+				89E818E8F0FA423287C4C79C /* Check Pods Manifest.lock */,
+				DC2C401F17A7E0E80082E09A /* Sources */,
+				DC2C402017A7E0E80082E09A /* Frameworks */,
+				DC2C402117A7E0E80082E09A /* Headers */,
+				DC2C402217A7E0E80082E09A /* Resources */,
+				A7336CC8B7894D39A941735D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = azure;
+			productName = azure;
+			productReference = DC2C402417A7E0E90082E09A /* azure.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DC2C403B17A7E0EA0082E09A /* azureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC2C405117A7E0EA0082E09A /* Build configuration list for PBXNativeTarget "azureTests" */;
+			buildPhases = (
+				DC2C403717A7E0EA0082E09A /* Sources */,
+				DC2C403817A7E0EA0082E09A /* Frameworks */,
+				DC2C403917A7E0EA0082E09A /* Resources */,
+				DC2C403A17A7E0EA0082E09A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC2C404117A7E0EA0082E09A /* PBXTargetDependency */,
+			);
+			name = azureTests;
+			productName = azureTests;
+			productReference = DC2C403C17A7E0EA0082E09A /* azureTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC2C401B17A7E0E80082E09A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Microsoft;
+			};
+			buildConfigurationList = DC2C401E17A7E0E80082E09A /* Build configuration list for PBXProject "azure" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DC2C401A17A7E0E80082E09A;
+			productRefGroup = DC2C402517A7E0E90082E09A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC2C402317A7E0E80082E09A /* azure */,
+				DC2C403B17A7E0EA0082E09A /* azureTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC2C402217A7E0E80082E09A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC2C403217A7E0E90082E09A /* InfoPlist.strings in Resources */,
+				DC2C405917A7EB710082E09A /* azure.podspec in Resources */,
+				DC2C405B17A7EE390082E09A /* Podfile in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC2C403917A7E0EA0082E09A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC2C404817A7E0EA0082E09A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89E818E8F0FA423287C4C79C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A7336CC8B7894D39A941735D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC2C403A17A7E0EA0082E09A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC2C401F17A7E0E80082E09A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC2C405F17A7F2770082E09A /* MSQueueService.m in Sources */,
+				DC2C406717A9B0D40082E09A /* MSSharedKey.m in Sources */,
+				DC2C406B17A9B1D50082E09A /* MSHmacSha256Sign.m in Sources */,
+				DC6124C217C41C9100C3ACD4 /* Base64.m in Sources */,
+				DCBD794617C569B200871FAC /* MSWebResource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC2C403717A7E0EA0082E09A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC2C404B17A7E0EA0082E09A /* MSQueueServiceTests.m in Sources */,
+				DC79BA3217AA9DD70058AEC1 /* MSHmacSha256SignTests.m in Sources */,
+				DCBD794917C56BE600871FAC /* MSSharedKeyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC2C404117A7E0EA0082E09A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC2C402317A7E0E80082E09A /* azure */;
+			targetProxy = DC2C404017A7E0EA0082E09A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC2C403017A7E0E90082E09A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC2C403117A7E0E90082E09A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DC2C404617A7E0EA0082E09A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC2C404717A7E0EA0082E09A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC2C404C17A7E0EA0082E09A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DC2C404D17A7E0EA0082E09A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DC2C404F17A7E0EA0082E09A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 593C4A35C7EF45EDB5B6803D /* Pods.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "azure/azure-Prefix.pch";
+				INFOPLIST_FILE = "azure/azure-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		DC2C405017A7E0EA0082E09A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 593C4A35C7EF45EDB5B6803D /* Pods.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "azure/azure-Prefix.pch";
+				INFOPLIST_FILE = "azure/azure-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		DC2C405217A7E0EA0082E09A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "azure/azure-Prefix.pch";
+				INFOPLIST_FILE = "azureTests/azureTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DC2C405317A7E0EA0082E09A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "azure/azure-Prefix.pch";
+				INFOPLIST_FILE = "azureTests/azureTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC2C401E17A7E0E80082E09A /* Build configuration list for PBXProject "azure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC2C404C17A7E0EA0082E09A /* Debug */,
+				DC2C404D17A7E0EA0082E09A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC2C404E17A7E0EA0082E09A /* Build configuration list for PBXNativeTarget "azure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC2C404F17A7E0EA0082E09A /* Debug */,
+				DC2C405017A7E0EA0082E09A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC2C405117A7E0EA0082E09A /* Build configuration list for PBXNativeTarget "azureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC2C405217A7E0EA0082E09A /* Debug */,
+				DC2C405317A7E0EA0082E09A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC2C401B17A7E0E80082E09A /* Project object */;
+}
