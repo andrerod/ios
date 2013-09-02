@@ -56,7 +56,7 @@
     NSString *canonicalizedHeaders = @"";
     for (NSString * header in canonicalizedHeadersArray)
     {
-        [canonicalizedHeaders stringByAppendingString: [NSString stringWithFormat:@"%@:%@\n", [header lowercaseString], [webResource->headers objectForKey:header]]];
+        canonicalizedHeaders = [canonicalizedHeaders stringByAppendingString: [NSString stringWithFormat:@"%@:%@\n", [header lowercaseString], [webResource->headers objectForKey:header]]];
     }
     
     return canonicalizedHeaders;

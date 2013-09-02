@@ -26,12 +26,12 @@
 - (void)testGetCanonicalizedHeaders
 {
     MSWebResource* webResource = [[MSWebResource alloc] init];
-    [webResource->headers setObject:@"value" forKey:@"x-ms-header"];
-    [webResource->headers setObject:@"value" forKey:@"Content-Type"];
+    [webResource->headers setObject:@"value1" forKey:@"x-ms-header"];
+    [webResource->headers setObject:@"value2" forKey:@"Content-Type"];
 
     NSString *canonicalizedResources = [_subject getCanonicalizedHeaders: webResource];
 
-    STAssertEqualObjects(@"xxMmN2Ykt5fbCFfXhPKIyYvar4fRlTxUGBx0C9BpkgU=", canonicalizedResources, @"the canonicalized headers did not match");
+    STAssertEqualObjects(@"x-ms-header:value1\n", canonicalizedResources, @"the canonicalized headers did not match");
 }
 
 @end
